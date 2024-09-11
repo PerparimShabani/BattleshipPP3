@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+
+        <title>Battleship Game</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
+    </head>
+    <body>
+        <div id="game-container">
+            <h1>Battleship Game</h1>
+            <button id="start-game">Start Game</button>
+            <div id="game-board">
+                <div id="player-grid"></div>
+                <div id="computer-grid"></div>
+            </div>
+            <input type="text" id="guess-input" placeholder="Enter coordinates (e.g., 0,0,)">
+            <button id="submit-guess">Submit Guess</button>
+            <div id="game-message"></div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
