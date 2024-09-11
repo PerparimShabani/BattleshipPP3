@@ -3,8 +3,8 @@ import random
 class Battleship:
     def __init__(self, grid_size=10):
         self.grid_size = grid_size
-        self.player_grid = [['' for _ in range(grid_size)] for _ in range(grid_size)]
-        self.computer_grid = [['' for _ in range(grid_size)] for _ in range(grid_size)]
+        self.player_grid = [[' ' for _ in range(grid_size)] for _ in range(grid_size)]
+        self.computer_grid = [[' ' for _ in range(grid_size)] for _ in range(grid_size)]
         self.player_ships = []
         self.computer_ships = []
         self.ships_sizes = [5, 4, 3, 3, 2]
@@ -43,10 +43,10 @@ class Battleship:
             return "Off-grid guess. Please try again."
         
         if self.computer_grid[x][y] == 'S':
-            self.computer_grid[x][y] == 'X'
+            self.computer_grid[x][y] = 'X'
             return "Hit!"
         elif self.computer_grid[x][y] == ' ':
-            self.computer_grid[x][y] == 'O'
+            self.computer_grid[x][y] = 'O'
             return "Miss!"
         else:
             return "You've already guessed this location."
