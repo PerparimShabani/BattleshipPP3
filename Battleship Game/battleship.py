@@ -34,9 +34,9 @@ class Battleship:
         if direction == 'horizontal':
             for i in range(size):
                 grid[x][y+i] = 'S'
-            else:
-                for i in range(size):
-                    grid[x+i][y] = 'S'
+        else:
+            for i in range(size):
+                grid[x+i][y] = 'S'
                     
     def player_turn(self, x, y):
         if not (0 <= x < self.grid_size and 0 <= y < self.grid_size):

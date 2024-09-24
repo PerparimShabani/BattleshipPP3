@@ -45,7 +45,7 @@ document.getElementById("submit-guess").addEventListener("click", async () => {
 });
 
 function displayMessage(message) {
-  const messageDiv = document.getElementById("game-messages");
+  const messageDiv = document.getElementById("game-message");
   messageDiv.innerHTML += `<p>${message}</p>`;
   messageDiv.scrollTop = messageDiv.scrollHeight;
 }
