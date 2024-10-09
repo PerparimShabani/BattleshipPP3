@@ -66,8 +66,8 @@ class Battleship:
             return f"Computer missed at ({x}, {y})!"
         
     def check_game_over(self):
-        player_ships_sunk = all(self.computer_grid[ship[0][0][ship][0][1]] == 'X' for ship in self.computer_ships)
-        computer_ships_sunk = all(self.player_grid[ship[0][0][ship][0][1]] == 'X' for ship in self.computer_ships)
+        player_ships_sunk = all(self.computer_grid[ship[0][0]][ship[0][1]] == 'X' for ship in self.computer_ships)
+        computer_ships_sunk = all(self.player_grid[ship[0][0]][ship[0][1]] == 'X' for ship in self.computer_ships)
         
         if player_ships_sunk:
             return "Player wins!"
