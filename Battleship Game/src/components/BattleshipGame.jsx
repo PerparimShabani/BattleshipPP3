@@ -23,9 +23,9 @@ const BattleshipGame = () => {
     if (window.pyodide && input) {
       const [x, y] = input.split(",").map((num) => parseInt(num.trim()));
       const result = await window.pyodide.runPythonAsync(`
-            result = game.player_turn(${x}, ${y})
-            game.computer_turn()
-            result
+          result = game.player_turn(${x}, ${y})
+          game.computer_turn()
+          result
         `);
       setMessage(result);
       setInput("");
